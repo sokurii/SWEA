@@ -8,6 +8,8 @@
 # 방문한 노드에 대해 또 dfs 재귀
 def dfs(v):
     global cnt
+    visited[v] = 1
+    
     for i in adj[v]:
         if not visited[i]:
             visited[i] = 1
@@ -26,7 +28,6 @@ for _ in range(E):
 
 # 방문배열 만들고, 출발점 방문표시
 visited = [0 for _ in range(V+1)]
-visited[1] = 1
 cnt = 0
 dfs(1)
 
