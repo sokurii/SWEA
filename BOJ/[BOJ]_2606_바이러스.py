@@ -8,8 +8,10 @@
 # 방문한 노드에 대해 또 dfs 재귀
 def dfs(v):
     global cnt
+    # 노드 방문 해주고
     visited[v] = 1
-    
+
+    # 노드의 인접 요소들에 대해 깊이 탐색
     for i in adj[v]:
         if not visited[i]:
             visited[i] = 1
